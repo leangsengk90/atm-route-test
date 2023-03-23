@@ -28,7 +28,7 @@ pipeline{
                 
                 script{
                     docker.withRegistry('', 'dockerhub-auth') {
-                        def customImage = docker.build("xeng/kube-reactjs:${BUILD_NUMBER}")
+                        def customImage = docker.build("xeng/atm-route")
                         /* Push the container to the custom Registry */
                         customImage.push()
                     }
