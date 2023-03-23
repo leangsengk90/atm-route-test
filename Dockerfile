@@ -1,4 +1,4 @@
-FROM node:alpine as NODE_BUILD
+FROM node:latest as NODE_BUILD
 
 COPY *.json ./
 RUN npm install --silent
